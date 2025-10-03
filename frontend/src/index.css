@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-primaryGreen: #08CB00;
+  --color-secondaryGreen: #059212;
+  --color-custWhite: #FFFFFF;
+  --color-homeGreen: #B6CEB4;
+}
