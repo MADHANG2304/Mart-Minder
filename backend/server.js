@@ -2,18 +2,20 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const passport = require('passport');
-const session = require('express-session');
-const cookieSession = require('cookie-session');
+const session = require('express-session')
 const passportSetUp = require('./passport');
 const authRoute = require('./routes/auth');
 const app = express();
 
 
 app.use(
-    cookieSession({
-        name: 'session',
-        keys: ["My First Project"],
-        maxAge: 24 * 60 * 60 * 100
+    session({
+        secret: "My First Project",
+        resave: false,
+        saveUninitialized: true,
+        cookie: {
+        maxAge: 24 * 60 * 60 * 1000,
+        }
     })
 );
 
@@ -22,7 +24,7 @@ app.use(passport.session());
 
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "http://localhost:5173",
         methods: "GET,POST,PUT,DELETE",
         credentials: true,
     })

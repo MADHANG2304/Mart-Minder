@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Layout from './layout/layout';
-import Login from './pages/login';
+import Layout from './layout/Layout';
+import Login from './pages/Login';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
     <>
         <Router>
           <Routes>
-            <Route element={<Layout/>}/>
             <Route path='/' element={<Layout/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const passport = require("passport");
 
-router.get("login/success", (req, res) => {
+router.get("/login/success", (req, res) => {
     if (req.user) {
         res.status(200).json({
             error: false,
@@ -17,7 +17,7 @@ router.get("login/success", (req, res) => {
     }
 });
 
-router.get("login/failed", (req, res) => {
+router.get("/login/failed", (req, res) => {
     res.status(401).json({
         error: true,
         message: "Login failed",
@@ -27,8 +27,8 @@ router.get("login/failed", (req, res) => {
 router.get(
     "/google/callback",
     passport.authenticate("google", {
-        successRedirect: process.env.PORT,
-        failureRedirect: "/login/failed",
+        successRedirect: "http://localhost:5173/",
+        failureRedirect: "auth/login/failed",
     })
 )
 

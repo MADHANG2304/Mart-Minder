@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Login from '../pages/Login';
 
 const Navbar = () => {
   return (
@@ -29,15 +30,14 @@ const Navbar = () => {
           </div>
 
 
-          <button className="btn w-24 h-12" onClick={()=>document.getElementById('openLogin').showModal()}>Login</button>
+          <button className="btn w-24 h-10" onClick={()=>document.getElementById('openLogin').showModal()}>Login</button>
           
           <dialog id="openLogin" className="modal modal-bottom sm:modal-middle h-full">
-            <div className="modal-box bg-white">
+            <div className="modal-box bg-white shadow-lg  shadow-black">
               <form method="dialog">
                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
               </form>
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <p className="py-4">Press ESC key or click the button below to close</p>
+              <Login/>
             </div>
           
           </dialog>
