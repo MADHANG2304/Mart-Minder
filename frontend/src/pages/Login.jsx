@@ -3,24 +3,9 @@ import axios from 'axios'
 
 const login = () => {
 
-  const[user,setUser] = useState(null);
-
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/auth/login/success`, { withCredentials: true });
-        setUser(data.user);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    getUser();
-  }, []);
-
-
   const googleAuth = () => {
     const url = `${import.meta.env.VITE_API_URL}/auth/google`;
+    console.log(url);
     window.open(url,"_self");
   };
 
