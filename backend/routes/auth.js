@@ -24,8 +24,7 @@ router.get("/login/failed", (req, res) => {
     });
 });
 
-router.get(
-    "/google/callback",
+router.get("/google/callback",
     passport.authenticate("google", {
         successRedirect: "http://localhost:5173/",
         failureRedirect: "auth/login/failed",
@@ -34,9 +33,15 @@ router.get(
 
 router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 
-router.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect(process.env.PORT);
+
+router.get("/logout", (req, res, next) => {
+  req.logout(function(err) {
+    if (err) { 
+      return next(err); 
+    }
+    res.redirect("http://localhost:5173/");
+  });
 });
+
 
 module.exports = router;

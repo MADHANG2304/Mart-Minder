@@ -9,11 +9,12 @@ const About = () => {
     <div className='bg-custWhite w-full hero min-h-screen '>
       <div className="hero-content flex-col lg:flex-row w-full">
         <div className='ml-20 mr-20'>
-            <h1 className="text-6xl font-bold text-black">Fresh Groceries Delivered To Your  
-              <span className='text-primaryGreen'> Doorstep</span>
+            <h1 className="text-6xl font-bold text-black">Make healthy life with 
+              <span className='text-primaryGreen '> Fresh </span>
+              grocery
               </h1>
             <p className="py-6 text-xl text-black">
-              Get the freshest vegetables, juicy fruits and all yout daily essentials delivered right to your doorstep. Shop anytime, anywhere fast, easy and hassle-free.
+              Get the best quality and most delicious grocery food in the world, you can get them of with out website.
             </p>
           </div>
 

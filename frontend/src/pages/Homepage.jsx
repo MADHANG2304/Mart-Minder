@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImg from '../assets/heroPage.jpg';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -17,7 +18,9 @@ const Homepage = () => {
             <p className="py-6 text-2xl">
               Get the freshest vegetables, juicy fruits and all yout daily essentials delivered right to your doorstep. Shop anytime, anywhere fast, easy and hassle-free.
             </p>
-            <button className="btn bg-secondaryGreen hover:bg-black hover:text-primaryGreen">Get Started</button>
+            <Link to="/shop">
+              <button className="btn bg-secondaryGreen hover:bg-black hover:text-primaryGreen">Get Started</button>
+            </Link>
           </div>
         </div>
       </div>
