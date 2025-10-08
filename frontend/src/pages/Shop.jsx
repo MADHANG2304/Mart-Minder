@@ -6,6 +6,57 @@ import img3 from '../assets/ShopHero/img3.jpg'
 import img4 from '../assets/ShopHero/img4.jpg'
 
 const Shop = () => {
+    const cardData = [
+        {
+            id : 1,
+            img : img1,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 2,
+            img : img2,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 3,
+            img : img3,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 4,
+            img : img4,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 5,
+            img : img3,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 6,
+            img : img4,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 7,
+            img : img1,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 8,
+            img : img2,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+    ]
+
   return (
     <>
     <div className='bg-custWhite'>
@@ -33,119 +84,22 @@ const Shop = () => {
         </div>
 
         <div className='flex flex-wrap gap-5 justify-center p-5'>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img1}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
+            {   cardData.map((card) => (
+                    <div key={card.id} className="card  image-full w-96 shadow-sm hover:scale-105 transition-transform duration-300">
+                        <figure>
+                            <img
+                            src={card.img}
+                            alt={card.title} />
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title">{card.title}</h2>
+                            <p>{card.desc}</p>
+                            <div className="card-actions justify-end">
+                            <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img2}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img3}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img4}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img3}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img1}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img4}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            <div className="card  image-full w-96 shadow-sm">
-                <figure>
-                    <img
-                    src={img2}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify-end">
-                    <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                    </div>
-                </div>
-            </div>
-            
+            ))}
         </div>
     </div>
     </>
