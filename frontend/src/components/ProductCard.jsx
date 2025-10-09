@@ -37,7 +37,7 @@ const ProductCard = () => {
             desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
         },
         {    
-            id : 5,
+            id : 6,
             img : carousleImg4,
             title : "Card Title",
             desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
@@ -49,7 +49,31 @@ const ProductCard = () => {
             desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
         },
         {
-            id : 7,
+            id : 8,
+            img : carousleImg2,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 9,
+            img : carousleImg3,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {    
+            id : 10,
+            img : carousleImg4,
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 11,
+            img : carousleImg3, 
+            title : "Card Title",
+            desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
+        },
+        {
+            id : 12,
             img : carousleImg2,
             title : "Card Title",
             desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
