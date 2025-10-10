@@ -3,10 +3,12 @@ import Layout from "./layout/Layout";
 import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
 import Shop from "./pages/Shop";
+import { ProductProvider } from "./context/ProductContext";
 
 function App() {
   return (
     <AuthProvider>
+    <ProductProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />} />
@@ -14,6 +16,7 @@ function App() {
           <Route path="/shop" element={<Shop/>} />
         </Routes>
       </Router>
+    </ProductProvider>
     </AuthProvider>
   );
 }

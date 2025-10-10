@@ -1,10 +1,11 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import Login from '../pages/Login';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const { user } = useAuth(); 
+  const navigate = useNavigate();
 
   const googleLogout = () => {
     const logoutUrl = `${import.meta.env.VITE_API_URL}/auth/logout`;
@@ -75,12 +76,8 @@ const Navbar = () => {
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <Link to="/">
-              <li className="text-xl link-hover text-primaryGreen"><a>Home</a></li>
-            </Link>
-            <Link to="/shop">
-              <li className="text-xl link-hover hover:text-primaryGreen"><a>Shop</a></li>
-            </Link>
+            <li className="text-xl link-hover text-primaryGreen" onClick={() => navigate("/")}><a>Home</a></li>
+            <li className="text-xl link-hover hover:text-primaryGreen" onClick={() => navigate("/shop")}><a>Shop</a></li>
             <li className="text-xl link-hover hover:text-primaryGreen"><a>Contact</a></li>
             <li className="text-xl link-hover hover:text-primaryGreen"><a>About Us</a></li>
           </ul>

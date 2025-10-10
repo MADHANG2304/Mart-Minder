@@ -6,6 +6,11 @@ const session = require('express-session')
 const passportSetUp = require('./passport');
 const authRoute = require('./routes/auth');
 const app = express();
+const connectDB = require('./db');
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
 app.use(
@@ -29,6 +34,8 @@ app.use(
         credentials: true,
     })
 );
+
+connectDB();
 
 app.use("/auth", authRoute);
 
