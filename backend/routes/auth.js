@@ -98,4 +98,26 @@ router.get("/:id" , async (req , res) => {
     }   
 })
 
+router.put("/:id" , async (req , res) => {
+    const {name , price , description , category , stock , imageUrl} = req.body;
+    if(!name || !price || !description || !category || !stock || !imageUrl){
+        return res.status(400).json({error: "Please fill all the fields"});
+    }
+    try {
+        const updatedProduct = await
+            Product.findByIdAndUpdate(
+                req.params.id,
+                {name , price , description , category , stock , imageUrl},
+                {new: true}
+            );
+        if(!updatedProduct)
+        {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+        return res.status(200).json({ message: 'Product updated successfully', product: updatedProduct });
+    } catch (error) {
+        return res.status(500).json({error : "Error updating Product"});
+    }
+})
+
 module.exports = router;

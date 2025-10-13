@@ -10,57 +10,6 @@ const Shop = () => {
 
     const {products} = useProducts();
 
-    // const cardData = [
-    //     {
-    //         id : 1,
-    //         img : img1,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 2,
-    //         img : img2,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 3,
-    //         img : img3,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 4,
-    //         img : img4,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 5,
-    //         img : img3,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 6,
-    //         img : img4,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 7,
-    //         img : img1,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    //     {
-    //         id : 8,
-    //         img : img2,
-    //         title : "Card Title",
-    //         desc : "A card component has a figure, a body part, and inside body there are title and actions parts"
-    //     },
-    // ]
-
   return (
     <>
     <div className='bg-custWhite'>
