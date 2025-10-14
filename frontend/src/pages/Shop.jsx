@@ -36,6 +36,17 @@ const Shop = () => {
             </div> 
         </div>
 
+        <div className='pl-2 pr-2 text-black'>
+            <div className="navbar shadow-sm bg-homeWhite rounded-md flex justify-center items-center p-2 gap-10">
+                <div className="navbar-center hidden lg:flex">
+                    <div className="menu menu-horizontal flex gap-2">
+                    <button className="btn btn-md btn-ghost text-xl hover:bg-secondaryGreen">Home</button>
+                    <button className="btn btn-md btn-ghost text-xl hover:bg-secondaryGreen">Orders</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div className='flex flex-wrap gap-5 justify-center p-5'>
             {   products.map((card) => (
                     <div key={card.id} className="card  image-full w-96 h-96 shadow-sm hover:scale-105 transition-transform duration-300">
