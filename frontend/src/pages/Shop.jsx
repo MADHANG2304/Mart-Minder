@@ -5,6 +5,7 @@ import img2 from '../assets/ShopHero/img2.jpg'
 import img3 from '../assets/ShopHero/img3.jpg'
 import img4 from '../assets/ShopHero/img4.jpg'
 import { useProducts } from '../context/ProductContext';
+import ShopProducts from '../components/ShopProducts';
 
 const Shop = () => {
 
@@ -40,30 +41,14 @@ const Shop = () => {
             <div className="navbar shadow-sm bg-homeWhite rounded-md flex justify-center items-center p-2 gap-10">
                 <div className="navbar-center hidden lg:flex">
                     <div className="menu menu-horizontal flex gap-2">
-                    <button className="btn btn-md btn-ghost text-xl hover:bg-secondaryGreen">Home</button>
+                    <button className="btn btn-md btn-ghost text-xl shadow-2xl hover:bg-secondaryGreen">Home</button>
                     <button className="btn btn-md btn-ghost text-xl hover:bg-secondaryGreen">Orders</button>
                     </div>
                 </div>
             </div>
         </div>
-
         <div className='flex flex-wrap gap-5 justify-center p-5'>
-            {   products.map((card) => (
-                    <div key={card.id} className="card  image-full w-96 h-96 shadow-sm hover:scale-105 transition-transform duration-300">
-                        <figure>
-                            <img className='w-full object-cover'
-                            src={card.imageUrl}
-                            alt={card.name} />
-                        </figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{card.name}</h2>
-                            <p>{card.description}</p>
-                            <div className="card-actions justify-end">
-                            <button className="btn bg-secondaryGreen text-custWhite hover:bg-custWhite hover:text-secondaryGreen">View More</button>
-                            </div>
-                        </div>
-                    </div>
-            ))}
+            <ShopProducts/>
         </div>
     </div>
     </>

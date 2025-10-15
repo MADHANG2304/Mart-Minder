@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
 import Shop from "./pages/Shop";
 import { ProductProvider } from "./context/ProductContext";
+import shopProducts from "./components/ShopProducts";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Layout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/shop" element={<Shop/>} />
+          <Route path="/productHome" element={<shopProducts/>}/>
         </Routes>
       </Router>
     </ProductProvider>
