@@ -5,7 +5,7 @@ const ShopProducts = () => {
     const {products} = useProducts();
   return (
     <div>
-      <div className='flex flex-wrap gap-5 justify-center p-5'>
+      <div className='flex flex-wrap gap-5 justify-center p-5 bg-custWhite'>
             {   products.map((card) => (
                     <div key={card.id} className="card  image-full w-96 h-96 shadow-sm hover:scale-105 transition-transform duration-300">
                         <figure>
