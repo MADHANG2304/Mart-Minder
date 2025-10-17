@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import img2 from '../assets/ShopHero/img2.jpg';
 import ShopProducts from '../components/ShopProducts';
+import SuperMarkets from './SuperMarkets';
 
 const Shop = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -46,6 +47,15 @@ const Shop = () => {
               </button>
 
               <button
+                onClick={() => setActiveTab('supermarket')}
+                className={`btn btn-md btn-ghost text-xl shadow-2xl  ${
+                  activeTab === 'supermarket' ? 'bg-secondaryGreen text-white hover:bg-black hover:text-primaryGreen'  : ''
+                }`}
+              >
+                SuperMarkets
+              </button>
+
+              <button
                 onClick={() => setActiveTab('orders')}
                 className={`btn btn-md btn-ghost text-xl ${
                   activeTab === 'orders' ? 'bg-secondaryGreen text-white hover:bg-black hover:text-primaryGreen' : ''
@@ -61,10 +71,16 @@ const Shop = () => {
       <div className="flex flex-wrap gap-5 justify-center p-5">
         {activeTab === 'home' ? (
           <ShopProducts />
+        ) : activeTab === 'supermarket' ? (
+            <SuperMarkets/>
+          // <div className="text-center text-black p-10">
+          //   <h2 className="text-3xl font-semibold mb-4">This is SuperMarket Page</h2>
+          //   <p className="text-lg">No orders have been placed yet.</p>
+          // </div>
         ) : (
           <div className="text-center text-black p-10">
             <h2 className="text-3xl font-semibold mb-4">Your Orders</h2>
-            <p className="text-lg">No orders have been placed yet.</p>
+            <p className="text-lg">No SuperMarket have been added yet.</p>
           </div>
         )}
       </div>
