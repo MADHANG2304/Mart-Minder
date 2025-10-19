@@ -5,9 +5,11 @@ import { AuthProvider } from "./context/AuthContext";
 import Shop from "./pages/Shop";
 import { ProductProvider } from "./context/ProductContext";
 import ShopProducts from "./components/ShopProducts";
+import { MarketProvider } from "./context/MarketContext";
 
 function App() {
   return (
+    <MarketProvider>
     <AuthProvider>
     <ProductProvider>
       <Router>
@@ -20,6 +22,7 @@ function App() {
       </Router>
     </ProductProvider>
     </AuthProvider>
+    </MarketProvider>
   );
 }
 

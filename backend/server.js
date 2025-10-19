@@ -6,6 +6,7 @@ const session = require('express-session')
 const passportSetUp = require('./passport');
 const authRoute = require('./routes/auth');
 const productRoute = require('./routes/product');
+const marketRoute = require('./routes/market');
 const app = express();
 const connectDB = require('./db');
 
@@ -40,6 +41,7 @@ connectDB();
 
 app.use("/auth", authRoute);
 app.use("/product", productRoute);
+app.use("/market", marketRoute);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
