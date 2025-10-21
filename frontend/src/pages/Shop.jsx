@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import img2 from '../assets/ShopHero/img2.jpg';
 import ShopProducts from '../components/ShopProducts';
 import SuperMarkets from './SuperMarkets';
+import Orders from './Orders';
 
 const Shop = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -73,15 +74,8 @@ const Shop = () => {
           <ShopProducts />
         ) : activeTab === 'supermarket' ? (
             <SuperMarkets/>
-          // <div className="text-center text-black p-10">
-          //   <h2 className="text-3xl font-semibold mb-4">This is SuperMarket Page</h2>
-          //   <p className="text-lg">No orders have been placed yet.</p>
-          // </div>
         ) : (
-          <div className="text-center text-black p-10">
-            <h2 className="text-3xl font-semibold mb-4">Your Orders</h2>
-            <p className="text-lg">No SuperMarket have been added yet.</p>
-          </div>
+          <Orders/>
         )}
       </div>
     </div>
