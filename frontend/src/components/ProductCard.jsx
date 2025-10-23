@@ -14,7 +14,7 @@ const ProductCard = () => {
             <p className='text-custWhite'>Loading Products...</p>
         ) : (
             products.map((product) => (
-                <div className="card bg-custWhite text-black shadow-sm w-72 h-96 hover:scale-105 transition-transform duration-300">
+                <div className="card bg-custWhite text-black shadow-sm w-72 h-96 hover:scale-105 transition-transform duration-300" key={product._id}>
                     <figure>
                         <img className='max-h-44 w-full object-cover'
                         src={product.imageUrl}

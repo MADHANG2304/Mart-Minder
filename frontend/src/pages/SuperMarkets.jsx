@@ -5,12 +5,12 @@ const SuperMarkets = () => {
   const { markets } = useMarkets();
 
   return (
-    <div className='w-full flex'>
+    <div className='w-full flex flex-wrap bg-cloudy justify-center p-5 rounded-md'>
       {Array.isArray(markets) && markets.length > 0 ? (
         markets.map((market) => (
           <div 
-            key={market._id || market.id} 
-            className='text-black bg-cloudy flex flex-wrap gap-10 p-5 pl-10'
+            key={market._id} 
+            className='text-black  flex flex-wrap w-2/4 p-5'
           >
             <div className="card card-side bg-custWhite shadow-sm ">
               <figure>

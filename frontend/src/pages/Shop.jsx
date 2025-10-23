@@ -40,7 +40,7 @@ const Shop = () => {
             <div className="menu menu-horizontal flex gap-2">
               <button
                 onClick={() => setActiveTab('home')}
-                className={`btn btn-md btn-ghost text-xl shadow-2xl  ${
+                className={`btn btn-md btn-ghost text-xl shadow-2xl bg-cloudy hover:text-white hover:bg-black ${
                   activeTab === 'home' ? 'bg-secondaryGreen text-white hover:bg-black hover:text-primaryGreen'  : ''
                 }`}
               >
@@ -49,7 +49,7 @@ const Shop = () => {
 
               <button
                 onClick={() => setActiveTab('supermarket')}
-                className={`btn btn-md btn-ghost text-xl shadow-2xl  ${
+                className={`btn btn-md btn-ghost text-xl shadow-2xl bg-cloudy hover:text-white hover:bg-black ${
                   activeTab === 'supermarket' ? 'bg-secondaryGreen text-white hover:bg-black hover:text-primaryGreen'  : ''
                 }`}
               >
@@ -58,7 +58,7 @@ const Shop = () => {
 
               <button
                 onClick={() => setActiveTab('orders')}
-                className={`btn btn-md btn-ghost text-xl ${
+                className={`btn btn-md btn-ghost text-xl bg-cloudy hover:text-white hover:bg-black ${
                   activeTab === 'orders' ? 'bg-secondaryGreen text-white hover:bg-black hover:text-primaryGreen' : ''
                 }`}
               >
